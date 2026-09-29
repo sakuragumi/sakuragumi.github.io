@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100">
+  <defs>
+    <linearGradient id="p" x1="0" y1="-4" x2="0" y2="-46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d9657f"/>
+      <stop offset=".55" stop-color="#ee9fb1"/>
+      <stop offset="1" stop-color="#f8c9d3"/>
+    </linearGradient>
+    <path id="petal" d="M0-5C-14-11-20-30-11-45Q-4.5-44.5 0-38Q4.5-44.5 11-45C20-30 14-11 0-5Z" fill="url(#p)"/>
+  </defs>
+  <g transform="rotate(-8)">
+    <use href="#petal" transform="rotate(0) rotate(16 0 -5)"/>
+    <use href="#petal" transform="rotate(72) rotate(16 0 -5)"/>
+    <use href="#petal" transform="rotate(144) rotate(16 0 -5)"/>
+    <use href="#petal" transform="rotate(216) rotate(16 0 -5)"/>
+    <use href="#petal" transform="rotate(288) rotate(16 0 -5)"/>
+  </g>
+  <circle r="4.2" fill="#fff3f5"/>
+  <circle r="1.9" fill="#c9607a"/>
+</svg>
