@@ -1,6 +1,336 @@
-<html>
-	<body>
-		<h1>写真部さくら組のホームページ</h1>
-		<p>近日公開予定！</p>
-	</body>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>筑波大学写真部さくら組 — SAKURAGUMI</title>
+  <meta name="description" content="筑波大学写真部さくら組の公式サイト。ひかりを、あつめて。">
+  <meta name="theme-color" content="#faf6f1">
+  <link rel="canonical" href="https://sakuragumi.org/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="筑波大学写真部さくら組">
+  <meta property="og:title" content="筑波大学写真部さくら組 — SAKURAGUMI">
+  <meta property="og:description" content="ひかりを、あつめて。筑波大学写真部さくら組の公式サイト。">
+  <meta property="og:url" content="https://sakuragumi.org/">
+  <meta property="og:image" content="https://sakuragumi.org/assets/og.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@sakura_photo">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..500;1,6..96,400..500&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Italiana&family=Share+Tech+Mono&family=Zen+Kaku+Gothic+New:wght@300;400&family=Zen+Old+Mincho:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@500;700&text=%E3%81%95%E3%81%8F%E3%82%89%E7%B5%84%E6%A1%9C&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+    try { if (sessionStorage.getItem('sg-intro')) document.documentElement.classList.add('no-intro'); } catch (e) {}
+  </script>
+  <script src="assets/js/sakura.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <!--
+    リンク先一覧（変更するときは data-link 属性で検索できます）
+      data-link="profile"   団体情報（新歓Web） https://shinkan-web.zdk.tsukuba.ac.jp/orgs/01022/
+      data-link="instagram" Instagram         https://instagram.com/itf._sakura_gumi
+      data-link="x"         X                 https://x.com/sakura_photo
+  -->
+
+  <a class="skip" href="#main">本文へスキップ</a>
+
+  <!-- イントロ：絞りが開く -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <svg class="intro__iris" viewBox="-100 -100 200 200" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="blade" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#1c1619"/>
+          <stop offset="1" stop-color="#0b0809"/>
+        </linearGradient>
+      </defs>
+      <g id="iris-blades"></g>
+    </svg>
+    <div class="intro__label">
+      <span class="intro__mark"><svg viewBox="-50 -50 100 100"><use href="#sg-flower"/></svg></span>
+      <span class="intro__name">SAKURAGUMI</span>
+      <span class="intro__af"><i></i>focusing</span>
+    </div>
+    <div class="intro__flash"></div>
+  </div>
+
+  <!-- 共有シンボル -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="sg-grad" x1="0" y1="-4" x2="0" y2="-46" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#d9657f"/>
+        <stop offset=".55" stop-color="#ee9fb1"/>
+        <stop offset="1" stop-color="#f8c9d3"/>
+      </linearGradient>
+      <path id="sg-petal" d="M0-5C-14-11-20-30-11-45Q-4.5-44.5 0-38Q4.5-44.5 11-45C20-30 14-11 0-5Z"/>
+      <g id="sg-flower" fill="url(#sg-grad)">
+        <g transform="rotate(-8)">
+          <use href="#sg-petal" transform="rotate(0) rotate(16 0 -5)"/>
+          <use href="#sg-petal" transform="rotate(72) rotate(16 0 -5)"/>
+          <use href="#sg-petal" transform="rotate(144) rotate(16 0 -5)"/>
+          <use href="#sg-petal" transform="rotate(216) rotate(16 0 -5)"/>
+          <use href="#sg-petal" transform="rotate(288) rotate(16 0 -5)"/>
+        </g>
+        <circle r="4.2" fill="#fff3f5"/>
+        <circle r="1.9" fill="#c9607a"/>
+      </g>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2Z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
+      <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9S14.6 18.4 12 21M12 3C9.4 5.6 8.2 8.6 8.2 12s1.2 6.4 3.8 9"/></g></symbol>
+    </defs>
+  </svg>
+
+  <canvas class="petals petals--back" id="petals-back" aria-hidden="true"></canvas>
+  <div class="top-fade" aria-hidden="true"></div>
+
+  <!-- ファインダー -->
+  <div class="viewfinder" aria-hidden="true">
+    <span class="vf-corner vf-corner--tl"></span>
+    <span class="vf-corner vf-corner--tr"></span>
+    <span class="vf-corner vf-corner--bl"></span>
+    <span class="vf-corner vf-corner--br"></span>
+    <div class="vf-hud">
+      <span>AF-S</span><span>F2.8</span><span>1/250</span><span>ISO 400</span>
+      <span class="vf-battery"><i></i><i></i><i></i></span>
+    </div>
+    <div class="vf-meter">
+      <div class="vf-meter__scale">
+        <span>-2</span><span>-1</span><span>0</span><span>+1</span><span>+2</span>
+      </div>
+      <div class="vf-meter__ticks"></div>
+      <div class="vf-meter__needle"></div>
+    </div>
+    <div class="vf-stamp">
+      <span class="vf-frame">FRAME <b id="frame-no">01</b>/36</span>
+      <span class="vf-date" id="date-stamp">'26 4 1</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <svg class="brand__mark" viewBox="-50 -50 100 100" aria-hidden="true"><use href="#sg-flower"/></svg>
+      <span class="brand__text"><span class="brand__ja">さくら組</span><span class="brand__en">Sakuragumi</span></span>
+    </a>
+    <nav class="nav" aria-label="ページ内">
+      <a href="#about"><small>01</small>About</a>
+      <a href="#join"><small>02</small>Join</a>
+      <a href="#follow"><small>03</small>Follow</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" data-theme="day">
+      <div class="hero__mark" aria-hidden="true">
+        <svg class="mark__ring" viewBox="-200 -200 400 400">
+          <defs>
+            <path id="ring-path" d="M0-171a171 171 0 1 1 0 342a171 171 0 1 1 0-342"/>
+          </defs>
+          <circle r="190" pathLength="360" class="mark__ticks"/>
+          <circle r="190" pathLength="360" class="mark__ticks mark__ticks--major"/>
+          <text class="mark__text"><textPath href="#ring-path" textLength="1070">SAKURAGUMI · UNIVERSITY OF TSUKUBA · 筑波大学写真部さくら組 · ひかりを、あつめて ·</textPath></text>
+          <circle r="158" class="mark__circle"/>
+        </svg>
+        <svg class="mark__flower" viewBox="-200 -200 400 400">
+          <g transform="rotate(-8)">
+              <path pathLength="1" transform="rotate(0) scale(3.05) rotate(16 0 -5)" d="M0-5C-14-11-20-30-11-45Q-4.5-44.5 0-38Q4.5-44.5 11-45C20-30 14-11 0-5Z"/>
+              <path pathLength="1" transform="rotate(72) scale(3.05) rotate(16 0 -5)" d="M0-5C-14-11-20-30-11-45Q-4.5-44.5 0-38Q4.5-44.5 11-45C20-30 14-11 0-5Z"/>
+              <path pathLength="1" transform="rotate(144) scale(3.05) rotate(16 0 -5)" d="M0-5C-14-11-20-30-11-45Q-4.5-44.5 0-38Q4.5-44.5 11-45C20-30 14-11 0-5Z"/>
+              <path pathLength="1" transform="rotate(216) scale(3.05) rotate(16 0 -5)" d="M0-5C-14-11-20-30-11-45Q-4.5-44.5 0-38Q4.5-44.5 11-45C20-30 14-11 0-5Z"/>
+              <path pathLength="1" transform="rotate(288) scale(3.05) rotate(16 0 -5)" d="M0-5C-14-11-20-30-11-45Q-4.5-44.5 0-38Q4.5-44.5 11-45C20-30 14-11 0-5Z"/>
+          </g>
+          <circle r="9" class="mark__center"/>
+        </svg>
+      </div>
+
+      <div class="hero__title">
+        <p class="hero__eyebrow"><span class="line"></span><em>Sakuragumi, University of Tsukuba</em></p>
+        <h1 class="hero__name">
+          <span class="visually-hidden">筑波大学写真部さくら組</span>
+          <span class="hero__name-chars" aria-hidden="true" data-split>さくら組</span>
+        </h1>
+        <p class="hero__en" aria-hidden="true"><span data-split>SAKURAGUMI</span></p>
+        <p class="hero__sub"><span class="line"></span>筑波大学写真部さくら組</p>
+      </div>
+
+      <div class="hero__copy">
+        <p class="hero__copy-main">ひかりを、あつめて。<span class="hanko" aria-hidden="true">桜</span></p>
+        <p class="hero__copy-sub">春夏秋冬、ファインダーの向こうへ。</p>
+      </div>
+
+      <a class="hero__scroll" href="#about"><span>Scroll</span><i></i></a>
+    </section>
+
+    <!-- フィルムの帯 -->
+    <div class="film" data-theme="day" aria-hidden="true">
+      <div class="film__edge film__edge--top"><div class="film__edge-track" data-edge></div></div>
+      <div class="film__track" data-marquee>
+        <div class="film__group">
+          <span>Sakuragumi</span><i class="film__flower"><svg viewBox="-50 -50 100 100"><use href="#sg-flower"/></svg></i>
+          <span class="ja">さくら組</span><i class="film__flower"><svg viewBox="-50 -50 100 100"><use href="#sg-flower"/></svg></i>
+          <span>Photography</span><i class="film__flower"><svg viewBox="-50 -50 100 100"><use href="#sg-flower"/></svg></i>
+          <span class="ja">光</span><i class="film__flower"><svg viewBox="-50 -50 100 100"><use href="#sg-flower"/></svg></i>
+          <span>University of Tsukuba</span><i class="film__flower"><svg viewBox="-50 -50 100 100"><use href="#sg-flower"/></svg></i>
+          <span class="ja">写真</span><i class="film__flower"><svg viewBox="-50 -50 100 100"><use href="#sg-flower"/></svg></i>
+        </div>
+      </div>
+      <div class="film__edge film__edge--bottom"><div class="film__edge-track" data-edge></div></div>
+    </div>
+
+    <!-- About -->
+    <section class="about" id="about" data-theme="day">
+      <div class="container">
+        <p class="label" data-reveal><span>01</span><i></i>About</p>
+        <h2 class="statement" aria-label="春を撮る。日々を撮る。ひかりを、あつめる。">
+          <span class="statement__line" data-reveal data-split aria-hidden="true">春を撮る。</span>
+          <span class="statement__line" data-reveal data-split aria-hidden="true">日々を撮る。</span>
+          <span class="statement__line" data-reveal data-split aria-hidden="true">ひかりを、あつめる。</span>
+        </h2>
+
+        <ul class="frames">
+          <li class="frame" data-reveal data-tilt>
+            <div class="frame__inner">
+              <span class="frame__no">No.01</span>
+              <span class="frame__kanji" aria-hidden="true">撮</span>
+              <div class="frame__cap">
+                <h3>撮る<em>Shoot</em></h3>
+                <p>日帰りも、泊まりがけも。撮影旅行へ。</p>
+              </div>
+            </div>
+          </li>
+          <li class="frame" data-reveal data-tilt>
+            <div class="frame__inner">
+              <span class="frame__no">No.02</span>
+              <span class="frame__kanji" aria-hidden="true">見</span>
+              <div class="frame__cap">
+                <h3>見せる<em>Exhibit</em></h3>
+                <p>雙峰祭で写真展。写真集やポストカードも。</p>
+              </div>
+            </div>
+          </li>
+          <li class="frame" data-reveal data-tilt>
+            <div class="frame__inner">
+              <span class="frame__no">No.03</span>
+              <span class="frame__kanji" aria-hidden="true">集</span>
+              <div class="frame__cap">
+                <h3>集う<em>Gather</em></h3>
+                <p>毎週木曜、クラブ室でゆるりと。</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Join -->
+    <section class="join" id="join" data-theme="dusk">
+      <div class="join__rings" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="container join__inner">
+        <p class="label" data-reveal><span>02</span><i></i>Join us</p>
+        <h2 class="join__title" aria-label="一緒に、撮ろう。">
+          <span data-reveal data-split aria-hidden="true">一緒に、</span><span data-reveal data-split aria-hidden="true">撮ろう。</span>
+        </h2>
+        <p class="join__lead" data-reveal><span>見学・入部のご相談は、</span><span>Instagram か X の DM へ</span><span>お気軽にどうぞ。</span><br><span>高価な機材はなくても大丈夫。</span><span>スマホで撮る人も大歓迎です。</span></p>
+
+        <dl class="spec" data-reveal>
+          <div><dt>Day</dt><dd>毎週木曜 18:30–21:00</dd></div>
+          <div><dt>Place</dt><dd>春日エリア 福利厚生棟 クラブ室Ⅲ</dd></div>
+          <div><dt>Members</dt><dd>約20名（学群生〜院生）</dd></div>
+        </dl>
+
+        <div class="cta-wrap" data-reveal>
+          <div class="cta-item">
+            <a class="cta" data-link="instagram" href="https://instagram.com/itf._sakura_gumi" target="_blank" rel="noopener" data-magnetic>
+              <span class="cta__fill" aria-hidden="true"></span>
+              <span class="cta__label">
+                <span class="cta__ja">Instagram で DM</span>
+                <span class="cta__en">@itf._sakura_gumi</span>
+              </span>
+              <span class="cta__icon" aria-hidden="true"><svg><use href="#i-instagram"/></svg></span>
+            </a>
+          </div>
+          <div class="cta-item">
+            <a class="cta cta--sub" data-link="x" href="https://x.com/sakura_photo" target="_blank" rel="noopener" data-magnetic>
+              <span class="cta__fill" aria-hidden="true"></span>
+              <span class="cta__label">
+                <span class="cta__ja">X で DM</span>
+                <span class="cta__en">@sakura_photo</span>
+              </span>
+              <span class="cta__icon" aria-hidden="true"><svg><use href="#i-x"/></svg></span>
+            </a>
+          </div>
+        </div>
+
+        <p class="join__note" data-reveal>
+          <a data-link="profile" href="https://shinkan-web.zdk.tsukuba.ac.jp/orgs/01022/" target="_blank" rel="noopener"><span>活動内容などの団体情報は、</span><span>「筑波大学 新歓Web」にも</span><span>掲載しています<svg aria-hidden="true"><use href="#i-arrow-ne"/></svg></span></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Follow -->
+    <section class="follow" id="follow" data-theme="night">
+      <div class="container">
+        <p class="label" data-reveal><span>03</span><i></i>Follow</p>
+        <h2 class="follow__title" data-reveal><em>Follow</em> the light.</h2>
+        <ul class="links">
+          <li data-reveal>
+            <a class="link-row" data-link="instagram" href="https://instagram.com/itf._sakura_gumi" target="_blank" rel="noopener">
+              <span class="link-row__no">01</span>
+              <span class="link-row__icon" aria-hidden="true"><svg><use href="#i-instagram"/></svg></span>
+              <span class="link-row__name">Instagram</span>
+              <span class="link-row__desc">@itf._sakura_gumi</span>
+              <span class="link-row__arrow" aria-hidden="true"><svg><use href="#i-arrow-ne"/></svg></span>
+            </a>
+          </li>
+          <li data-reveal>
+            <a class="link-row" data-link="x" href="https://x.com/sakura_photo" target="_blank" rel="noopener">
+              <span class="link-row__no">02</span>
+              <span class="link-row__icon" aria-hidden="true"><svg><use href="#i-x"/></svg></span>
+              <span class="link-row__name">X</span>
+              <span class="link-row__desc">@sakura_photo</span>
+              <span class="link-row__arrow" aria-hidden="true"><svg><use href="#i-arrow-ne"/></svg></span>
+            </a>
+          </li>
+          <li data-reveal>
+            <a class="link-row" data-link="profile" href="https://shinkan-web.zdk.tsukuba.ac.jp/orgs/01022/" target="_blank" rel="noopener">
+              <span class="link-row__no">03</span>
+              <span class="link-row__icon" aria-hidden="true"><svg><use href="#i-web"/></svg></span>
+              <span class="link-row__name">Profile</span>
+              <span class="link-row__desc">団体情報（筑波大学 新歓Web）</span>
+              <span class="link-row__arrow" aria-hidden="true"><svg><use href="#i-arrow-ne"/></svg></span>
+            </a>
+          </li>
+          <!-- SNS を増やすときは上の <li> を複製して、アイコン（#i-web など）と名前を差し替えてください -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-theme="night">
+    <p class="footer__word" aria-hidden="true" data-reveal><span>SAKURAGUMI</span></p>
+    <div class="footer__bar container">
+      <p>&copy; <span id="year">2026</span> 筑波大学写真部さくら組</p>
+      <a class="footer__top" href="#top">Back to top<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </footer>
+
+  <canvas class="petals petals--front" id="petals-front" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="shutter-flash" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor__frame"><i></i><i></i><i></i><i></i></span>
+    <span class="cursor__dot"></span>
+  </div>
+</body>
 </html>
